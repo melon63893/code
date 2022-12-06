@@ -1,0 +1,56 @@
+classDiagram
+    Diller --> Discount: if amount > 
+    Diller --> Buying: if amount = 1
+    Guitar -->  Type
+    Type --> Acustic
+    Type --> Electro
+    Acustic --> Diller
+    Electro --> Diller
+    Discount --> Buying
+
+      class Diller{
+        +Martin
+        +Taylor
+        +Yamaha
+        +Larrivee
+        +Fender
+        +Gibson
+        +G&L
+    }
+
+    class Guitar{
+        +Type
+        +Name
+        +Diller
+        +Amound
+    }
+
+    class Discount{
+        (Amount*Price)/(100*15)
+    }
+
+    class Buying{
+        +Price
+        +Buying_guitar
+    }
+
+    class Type{
+        +Acustic
+        +Electro
+    }
+
+    class Acustic{
+        +Name
+        +Color
+        +Material
+        +Width
+        +Radius
+    }
+    
+    class Electro{
+        +Name
+        +Color
+        +Material
+        +Width
+        +Radius
+    }
